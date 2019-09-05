@@ -1,0 +1,88 @@
+
+{% load static from staticfiles %}
+{# we are loading this static THING which we can use inside this template so if you change url of static in the settings this let your template still work #}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Cezary Czemerda</title>
+
+</head>
+
+<body>
+    <!-- mobile menu -->
+
+            <div class="container">
+              <ul class="sidenav lighten-2" id="mobile-menu">
+                  <li>
+                    <div class="user-view">
+                      <a href="#user"><img class="circle" src="{% static 'me.jpg' %}" style="margin-left: 59px;"></a>
+                      <a href="#name"><span class="white-text name center">Cezary Czemerda</span></a>
+                      <a href="#email"><span class="white-text email center">cezary.czemerda1@gmail.com</span></a>
+                    </div>
+                  </li>
+                  <div class="center row container menus">
+                    <div class="col l4"><a href="{% url 'main_site' %}" class="btn-floating btn yellow darken-4"><i class="fa fa-Home"></i></a></div>
+                    <div class="col l4"><a href="https://www.linkedin.com/in/cezary-czemerda-3482ba154/" class="btn-floating btn blue darken-3"><i class="fab fa-Linkedin"></i></a></div>
+                    <div class="col l4"><a href="https://github.com/jimicc" class="btn-floating btn red darken-2"><i class="fab fa-Github"></i></a></div>
+                    <div class="col l4"><a href="mailto:cezary.czemerda1@gmail.com" class="btn-floating btn green darken-2"><i class="fa fa-envelope"></i></a></div>
+                  </div>
+                  <div>
+                    <li><a href="{% url 'about' %}"  class="white-text" >About me</a></li>
+                    <li><a href="https://www.linkedin.com/in/cezary-czemerda-3482ba154/"  class="white-text" >My Project</a></li>
+                    <li><a href="{% url 'cv' %}"  class="white-text" >Curriculum vitae</a></li>
+                    <li><a href="mailto:cezary.czemerda1@gmail.com"  class="white-text" >Contact</a></li>
+                  </div>
+                </ul>
+            </div>
+
+    <!-- sidebar fixed menu -->
+    <div class="leftside">
+      <ul class="right hide-on-med-and-down sidenav sidenav-fixed">
+        <li>
+          <div class="user-view">
+            <a href="#user"><img class="circle" src="{% static 'me.jpg' %}"></a>
+            <a href="#name"><span class="white-text name center">Cezary Czemerda</span></a>
+            <a href="#email"><span class="white-text email center">cezary.czemerda1@gmail.com</span></a>
+          </div>
+        </li>
+
+        <div class="center row">
+          <ul class="container">
+            <div class="col l3"><a href="{% url 'main_site' %}" class="btn-floating btn yellow darken-4"><i class="fa fa-Home"></i></a></div>
+            <div class="col l3"><a href="https://www.linkedin.com/in/cezary-czemerda-3482ba154/" class="btn-floating btn blue darken-3 "><i class="fab fa-Linkedin"></i></a></div>
+            <div class="col l3"><a href="https://github.com/jimicc" class="btn-floating btn red darken-2 "><i class="fab fa-Github"></i></a></div>
+            <div class="col l3"><a href="mailto:cezary.czemerda1@gmail.com" class="btn-floating btn green darken-2"><i class="fa fa-envelope"></i></a></div>
+          </ul>
+
+        </div>
+
+        <li><a href="{% url 'about' %}" class="white-text">About me</a></li>
+        <li><a href="#contact"  class="white-text" >My Project</a></li>
+        <li><a href="{% url 'cv' %}"  class="white-text" >Curriculum vitae</a></li>
+        <li><a href="#contact"  class="white-text" >Contact</a></li>
+      </ul>
+    </div>
+    <div class="content" style=" background-color: #f6f6f6;">
+
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <footer class="page-footer footer-copyright center-align">&copy; 2019
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="{% static 'scripts.js' %}"></script>
+
+  </body>
+  </html>

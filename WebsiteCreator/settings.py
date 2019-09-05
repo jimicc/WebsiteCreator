@@ -26,8 +26,9 @@ SECRET_KEY = 'uz4b=l4amg5wo(arhue*a1q62e(39zy9aa=an@*5#^mi9xxzuz'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'jimicc1.atthost24.pl',
+    'cezaryczemerda.pl',
     '127.0.0.1',
+    '192.168.1.80',
 ]
 
 
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'cms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

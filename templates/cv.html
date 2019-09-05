@@ -1,0 +1,159 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'styles-cv.css' %}">
+    <title>Curriculum vitae</title>
+
+</head>
+  <body>
+    <div class="cv-page">
+      <div class="cv-content">
+          <div class="row header">
+            <div class="col l3 m12 s12">
+              <img class="responsive-img" src="{% static 'me.jpg' %}">
+            </div>
+            <div class="text col l6 m12 s12">
+              <h2 class="title green-text-text-darken-2 padding-top" style="margin-top:10px">Cezary Czemerda</h2>
+              <h3>Back-end Web Developer</h3>
+              <div class="padding-top">
+                Self-motivated software developer with readiness for challenging tasks.
+                <p><strong><b>Currently avaliable.</b></strong></p>
+                <p>Willing to relocate to: Gdańsk, Gdynia  and Sopot</p>
+              </div>
+            </div>
+            <div class="meta col l3 m12 s12">
+              <span class="hide-on-large-only"><hr></span>
+              <div class="meta">
+                <strong>
+                  <div class="">
+                    <p><a href="http://cezaryczemerda.pl" class="green-text-text-darken-2">www.cezaryczemerda.pl</a></p>
+                    <p><a href="mailto:cezary.czemerda1@gmail.com" class="green-text-text-darken-2"></p>
+                    <p>+48 607 359 924</p>
+                    <p><a href="http://cezaryczemerda.pl" class="green-text-text-darken-2">Download PDF</a></p>
+                  </div>
+                </strong>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="section">
+            <div class="section-title">
+              <h5 class="left green-text-text-darken-2">Experience:</h5>
+              <div class="row">
+                <div class="col l3 m3 s12 center">
+                  <div class="green-darken-2-white-text">
+                    <strong>USŁUGI IT Cezary Czemerda</strong>
+                  </div>
+                  <span class="small">12/2018 - now</span>
+                </div>
+                <div class="col l9 m9 s12">
+                  <h6><strong>Full-stack Web Developer & IT Specialist</strong></h6>
+                  <p>Built and maintained a "WebsiteCreator". Freelancing simple web projects, such as websites. </p>
+                    <ul class="list">
+                      <li>WebsiteCreator allows to create static websites without IT knowledge.</li>
+                      <li>Every website owns Content Management System for content editing</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col l3 m3 s12 center">
+                  <div class="green-darken-2-white-text">
+                    <strong>Alarm-System</strong>
+                  </div>
+                  <span class="small">06/2018 - 03/2019</span>
+                </div>
+                <div class="col l9 m9 s12">
+                  <h6><strong>Electronics engineer & IT Specialist</strong></h6>
+                    <ul class="list">
+                      <li>Developed and maintained a website.</li>
+                      <li>Worked as electronics engineer.</li>
+                    </ul>
+                </div>
+              </div>
+
+              <h5 class="left green-text-text-darken-2 ">Education:</h5>
+
+              <div class="row">
+                <div class="col l3 m3 s12 center">
+                  <div class="green-darken-2-white-text">
+                    <strong>Gdynia Maritime University</strong>
+                  </div>
+                  <span class="small">2014-2018</span>
+                </div>
+                <div class="col l9 m9 s12">
+                  <h6><strong>Electronics and Telecomunications with major in Data Communication Systems and Networks</strong></h6>
+                    <ul class="list">
+                      <p>Engineer's Thesis - "Distributed measurement system sofware for slowly alternating magnetic field"</p>
+                    </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col l3 m3 s12 center">
+                  <div class="green-darken-2-white-text">
+                    <strong>Technical college in Kwidzyn </strong>
+                  </div>
+                  <span class="small">2010-2014</span>
+                </div>
+                <div class="col l9 m9 s12">
+                  <h6><strong>Profile: IT Specialist</strong></h6>
+                  <h6>Major subjects:</h6>
+                  <ul class="list">
+                    <li>Structural and object-oriented programming</li>
+                    <li>Internet applications</li>
+                    <li>Computer systems and networks</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h5 class="left green-text-text-darken-2">Skills and Perks:</h5>
+
+              <div class="row">
+                <div class="col l3 m4 s12 center">
+                  <div class="green-darken-2-white-text">
+
+                  </div>
+                </div>
+                <div class="col l9 m12 s12">
+                  <ul>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>Django</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>Python</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>MySQL</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>Object oriented programming</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>Materialize</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>HTML</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>CSS</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>Windows</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>Ubuntu</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>Hard-working</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>b2 English</strong></div></a></li>
+                    <li class="skills"><a rel="nofollow" target="_blank"><div class=""><strong>Independent & Team Working</strong></div></a></li>
+
+
+
+
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+            <div class="section-content">
+
+            </div>
+
+          </div>
+
+      </div>
+    </div>
+  </body>
+</html>

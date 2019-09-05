@@ -1,0 +1,24 @@
+{% extends 'base_layout.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div id="homepage" class="title" style="padding-top: 5%; padding-bottom: 1%; color: white;">
+  <div class="container home-padding" style="padding-top:10%;">
+    <h4><a href="#" class="sidenav-trigger hide-on-large-only btn center white z-depth-4" data-target="mobile-menu">
+          <i class="material-icons grey-text text-darken-2" style="margin: 0 0 0 0; font-size: 40px; text-shadow: 3px 5px 3px rgba(0, 0, 0, 0); ">menu</i>
+            <span class="grey-text text-darken-2" style="vertical-align: top; text-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.1); font-size: 15px; font-weight:bold;">menu</span>
+        </a>
+    </h4>
+
+    <h1 class="h1-small"> Hi, I am Cezary,</h1>
+    <h4 class="h4-small">a back-end developer candidate specialized in</h4>
+    <h2 style="padding-left: 2px;"><a href="" class="typewrite" id="typewrite" data-period="800" data-type='[ "Python", "Django", "MySQL", "HTML + CSS", "Materialize" ]'>
+        <span class="wrap"></span>
+      </a></h2>
+    <h4 class="h4-small">please feel free to check out my <a href="#">WebsiteCreator</a> project</h4>
+
+  </div>
+
+</div>
+
+{% endblock %}
