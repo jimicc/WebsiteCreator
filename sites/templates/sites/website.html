@@ -1,0 +1,51 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'styles-creator.css' %}">
+    <link rel="stylesheet" href="{% static 'animation-style.css' %}">
+    <title>Website Creator</title>
+</head>
+  <body class="themes">
+    <section class="container">
+      <div class="themes-page">
+        <div class="center indigo-text text-darken-2">
+        <a href="/sites/themes/website/new"><h1 class="btn-large indigo lighten-2 pulse waves-effect" style="font-size:2em">Create new website!</h1></a>
+
+        </div>
+        <div class="row"> <!-- cards is in views.py (the method "cards") -->
+          {% for website in website_detail %}
+          <div class="col s12 m6 l4">
+            <div class="card">
+            <div class="card-image materialboxed-cards">
+              <img class="materialboxed" src="{{ website.image.url }}">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{ website.title }}<i class="material-icons right">more_vert</i></span>
+              <p><a class="btn indigo lighten-2 waves-effect waves-light" href="{{ website.slug }}">Start!</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{ website.title }}<i class="material-icons right">close</i></span>
+              <p>{{ website.text }}</p>
+            </div>
+          </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="{% static 'scripts.js' %}"></script>
+  </body>
+</html>

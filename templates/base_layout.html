@@ -1,6 +1,6 @@
 
 {% load static from staticfiles %}
-{# we are loading this static THING which we can use inside this template so if you change url of static in the settings this let your template still work #}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,9 +37,9 @@
                   </div>
                   <div>
                     <li><a href="{% url 'about' %}"  class="white-text" >About me</a></li>
-                    <li><a href="https://www.linkedin.com/in/cezary-czemerda-3482ba154/"  class="white-text" >My Project</a></li>
+                    <li><a href="{% url 'sites:index' %}"  class="white-text" >My Project</a></li>
                     <li><a href="{% url 'cv' %}"  class="white-text" >Curriculum vitae</a></li>
-                    <li><a href="mailto:cezary.czemerda1@gmail.com"  class="white-text" >Contact</a></li>
+                    <li><a href="{% url 'contact' %}"  class="white-text" >Contact</a></li>
                   </div>
                 </ul>
             </div>
@@ -66,9 +66,9 @@
         </div>
 
         <li><a href="{% url 'about' %}" class="white-text">About me</a></li>
-        <li><a href="#contact"  class="white-text" >My Project</a></li>
+        <li><a href="{% url 'sites:index' %}"  class="white-text" >My Project</a></li>
         <li><a href="{% url 'cv' %}"  class="white-text" >Curriculum vitae</a></li>
-        <li><a href="#contact"  class="white-text" >Contact</a></li>
+        <li><a href="{% url 'contact' %}"  class="white-text" >Contact</a></li>
       </ul>
     </div>
     <div class="content" style=" background-color: #f6f6f6;">

@@ -1,0 +1,148 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'styles-creator.css' %}">
+    <link rel="stylesheet" href="{% static 'animation-style.css' %}">
+    <title>Website Creator</title>
+</head>
+<body>
+
+  <!-- navbar -->
+  <header class="scrollspy" id="logo">
+    <nav class="nav-fixed">
+      <div class="navbar black">
+      <div class="container">
+          <a href="#logo" class="brand-logo">Website Creator</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#about">About</a></li>
+            <li><a href="#start">Get Started</a></li>
+            <li><a href="#author">Author</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <ul class="sidenav grey lighten-2" id="mobile-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#start">Get Started</a></li>
+        <li><a href="#author">Author</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <span class="text1">free website builder</span>
+      <span class="text2">Create awesome <b>mobile-friendly</b> websites! <br> No coding and free.</span>
+    </div>
+  </header>
+
+  <!-- photo / grid -->
+  <section class="container section">
+    <div class="row">
+      <div class="col s12 l12 m12 center">
+        <h2 class="indigo-text text-darken-4 ">What is Website Creator?</h2>
+      </div>
+      <div class="col s12 l12 m12 scrollspy" id="about">
+          <img src="{% static 'mobile-devices.png' %}" alt="" class="responsive-img">
+      </div>
+      <div class="col s12 l12 m12 center"><p class="em2">Website Creator is a free online web app that allows to easily create websites,
+        small business services, online resumes and portfolios. A lot of beautiful website elements, templates will help you to start easily.</p></div>
+    </div>
+  </section>
+
+  <!-- parallax -->
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="{% static 'hills.jpg' %}" alt="" class="responsive-img">
+    </div>
+  </div>
+
+  <!-- services / tabs -->
+  <section class="section container ">
+    <div class="row">
+      <div class="col s12 l12 m12 center " ><h2 class="indigo-text text-darken-4" style="margin: 0 0 30px 0">It's so simple</h2></div>
+        <div class="col s12 l6 m6 scrollspy" id="start">
+          <div class="tv-container">
+            <video class="responsive-video" style="padding: 1.5% 1.5% 25% 1.5%;" autoplay loop><source src="{% static 'pexel.mp4' %}" type="video/mp4"></video>
+          </div>
+      </div>
+      <div class="col s12 l5 m5 offset-m1 offset-l1">
+        <!-- tabs -->
+        <ul class="tabs" style="margin-bottom:15px">
+          <li class="tab col s6">
+            <a href="#why-us" class="active indigo-text text-darken-4">Why this creator?</a>
+          </li>
+          <li class="tab col s6">
+            <a href="#editing" class="indigo-text text-darken-4">Who is it for?</a>
+          </li>
+        </ul>
+        <div id="why-us" class="col s12" style="font-size: 1.5em; text-align: justify;">
+            <p>This creator is minimalistic with easy-to-use interface.</p>
+            <p>All themes are adjusted to newest trends,  but first and foremost it's all Free for commercial and non-profit use</p>
+        </div>
+        <div id="editing" class="col s12" style="font-size: 1.5em; text-align: justify;">
+            <p>The creator is perfect for non-techies who are not familiar with the knowledge of web development and prefer to work as visually as possible.</p>
+            <p>Also great for pro-coders for fast prototyping and small customers' projects.</p>
+        </div>
+        </div>
+        <div class="col s12 l12 m12 center " ><h2 class="indigo-text text-darken-4" style="margin: 30px 0 15px 0">Are you ready?</h2></div>
+        <div class="col s12 l12 m12 center " ><h2 class="indigo btn-large waves pulse"><a href="{% url 'sites:themes' %}" class="white-text">Let's get started!</a> </h2></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  <footer class="page-footer grey darken-3">
+    <div class="container">
+      <div class="row scrollspy" id="author">
+        <div class="col l6 s12">
+          <h5>Author</h5>
+          <p>Cezary Czemerda</p>
+          <p>Please, feel free to check out my website. New free apps in the future!</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="{% url 'main_site' %}">My Website</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/cezaryczemerda/">Linked In</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/jimicc">Github</a></li>
+            <li><a class="grey-text text-lighten-3" href="mailto:cezary.czemerda1@gmail.com">Gmail</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+      <div class="container center-align">&copy; 2019</div>
+    </div>
+  </footer>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+      $('.materialboxed').materialbox();
+      $('.parallax').parallax();
+      $('.tabs').tabs();
+      $('.datepicker').datepicker({
+        disableWeekends: true,
+        yearRange: 1
+      });
+      $('.tooltipped').tooltip();
+      $('.scrollspy').scrollSpy();
+    });
+  </script>
+</body>
+</html>

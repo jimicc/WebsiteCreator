@@ -1,0 +1,43 @@
+{% extends 'base_layout.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="hide-on-large-only navbar" style="padding: 15px 0; background-color: #191917 ">
+  <div class="row container" style="margin-bottom:0;">
+    <div class="col s4 m6">
+      <a href="#" class="sidenav-trigger hide-on-large-only btn center transparent z-depth-4" data-target="mobile-menu">
+        <i class="material-icons white-text" style="font-size: 40px; text-shadow: 3px 5px 3px rgba(0, 0, 0, 0); ">menu</i>
+      </a>
+    </div>
+    <div class="col s8 m6 right white-text" style="text-align: right !important;">
+      <span style="font-size:1.65em;">Cezary Czemerda</span>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="title contact-box">
+  <div class="content-padding contact">
+    <h4>CONTACT ME</h4>
+    <hr>
+    <strong class="justify-small">
+      <p>I am available for hire and open to any ideas of employment in the field of back-end web developing (Django + Python).</p>
+      <p>Click on the link below to contact me:</p>
+      <div class="row">
+        <div class="col l3 m3 s12 nopadding">
+          Email:
+        </div>
+        <div class="col l9 m9 s12 nopadding"><a href="mailto:cezary.czemerda1@gmail.com"><div class="black-text px16"><i class="fa fa-envelope"></i> cezary.czemerda1@gmail.com</div></a></div>
+        <div class="col l3 m3 s12 nopadding">Linkedin:</div>
+        <div class="col l9 m9 s12 nopadding"><a href="https://www.linkedin.com/in/cezary-czemerda-3482ba154/"><div class="black-text px16"><i class="fab fa-Linkedin"></i> cezaryczemerda</div></a></div>
+        <div class="col l3 m3 s12 nopadding">Github:</div>
+        <div class="col l9 m9 s12 nopadding"><a href="https://github.com/jimicc"><div class="black-text px16"><i class="fab fa-Github"></i> jimicc</div></a></div>
+        <div class="col l3 m3 s12 nopadding">Phone:</div>
+        <div class="col l9 m9 s12 nopadding"><a href="tel:0048607359924"><div class="black-text px16"><i class="fa fa-phone"></i>+48 607 359 924</div></a></div>
+      </div>
+
+    </strong>
+  </div>
+</div>
+
+
+{% endblock %}
