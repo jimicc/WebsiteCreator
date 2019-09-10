@@ -11,10 +11,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <title>Photo Ninja</title>
+  <title>Website Creator </title>
   <style>
     header{
-      background: url("{{website_detail.image.url}}");
+      background: url("{{website_detail.background_image.url}}");
       background-size: cover;
       background-position: center;
       min-height: 1000px;
@@ -40,62 +40,42 @@
 
   <!-- navbar -->
   <header>
-    <nav class="nav-wrapper transparent">
+    <nav class="nav-wrapper" style="background-color: rgba(0,0,0,0.3);">
       <div class="container">
         <a href="#" class="brand-logo">{{ website_detail.title }}</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#photos">Photo's</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a></li>
-          <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Facebook">
-            <i class="fab fa-facebook"></i>
-          </a></li>
-          <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a></li>
+          <li><a href="#photos">{{ website_detail.link_1 }}</a></li>
+          <li><a href="#services">{{ website_detail.link_2 }}</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" id="mobile-menu">
-          <li><a href="#">Photo's</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#link_1">{{ website_detail.link_1 }}</a></li>
+          <li><a href="#link_2">{{ website_detail.link_2 }}</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <!-- photo / grid -->
-  <section class="container section scrollspy" id="photos">
-    <div class="row">
+  <section class="container section scrollspy center" id="link_1" style="padding-top:1vw;"><h2 class="center indigo-text text-darken-4" style="margin-bottom: 70px;">{{ website_detail.link_1 }}</h2>
+    <div class="row" style="margin-bottom:50px;">
       <div class="col s12 l4">
-          <img src="{{website_detail.image.url}}" alt="" class="responsive-img materialboxed">
+          <img src="{{website_detail.image_service_1.url}}" alt="" class="responsive-img materialboxed">
       </div>
       <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">Portraits</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+        <h2 class="indigo-text text-darken-4">{{ website_detail.title_service_1 }}</h2>
+        <p>{{ website_detail.text_service_1 }}</p>
       </div>
     </div>
     <div class="row">
       <div class="col s12 l4 offset-l1 push-l7">
-          <img src="{{website_detail.image.url}}" alt="" class="responsive-img materialboxed">
+          <img src="{{website_detail.image_service_2.url}}" alt="" class="responsive-img materialboxed">
       </div>
       <div class="col s12 l6 offset-l1 pull-l5 right-align">
-        <h2 class="indigo-text text-darken-4">Cityscapes</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12 l4">
-          <img src="{{website_detail.image.url}}" alt="" class="responsive-img materialboxed">
-      </div>
-      <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">Nature</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+        <h2 class="indigo-text text-darken-4">{{ website_detail.title_service_2 }}</h2>
+        <p>{{ website_detail.text_service_2 }}</p>
       </div>
     </div>
   </section>
@@ -103,122 +83,61 @@
   <!-- parallax -->
   <div class="parallax-container">
     <div class="parallax">
-      <img src="{{website_detail.image.url}}" alt="" class="responsive-img">
+      <img src="{{website_detail.parallax_image.url}}" alt="" class="responsive-img">
     </div>
   </div>
 
   <!-- services / tabs -->
-  <section class="section container scrollspy" id="services">
+  <section class="section container scrollspy" id="link_2">
     <div class="row">
       <div class="col s12 l4">
-        <h2 class="indigo-text text-darken-4">What I do..</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+        <h2 class="indigo-text text-darken-4">{{ website_detail.link_2_title }}</h2>
+        <p>{{ website_detail.link_2_content }}</p>
+
       </div>
       <div class="col s12 l6 offset-l2">
         <!-- tabs -->
         <ul class="tabs">
           <li class="tab col s6">
-            <a href="#photography" class="active indigo-text text-darken-4">Photography</a>
+            <a href="#photography" class="active indigo-text text-darken-4">{{ website_detail.link_2_tab_opt_1 }}</a>
           </li>
           <li class="tab col s6">
-            <a href="#editing" class="indigo-text text-darken-4">Editing</a>
+            <a href="#editing" class="indigo-text text-darken-4">{{ website_detail.link_2_tab_opt_2 }}</a>
           </li>
         </ul>
         <div id="photography" class="col s12">
-            <p class="flow-text indigo-text text-darken-4">Photography</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-            <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+            <p class="flow-text indigo-text text-darken-4">{{ website_detail.link_2_tab_opt_1 }}</p>
+            <p>{{ website_detail.link_2_tab_content_1 }}</p>
+
         </div>
         <div id="editing" class="col s12">
-            <p class="flow-text indigo-text text-darken-4">Editing</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-            <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+            <p class="flow-text indigo-text text-darken-4">{{ website_detail.link_2_tab_opt_2 }}</p>
+            <p>{{ website_detail.link_2_tab_content_2 }}</p>
+
         </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- parallax -->
-  <div class="parallax-container">
-    <div class="parallax">
-      <img src="{{website_detail.image.url}}" alt="" class="responsive-img">
-    </div>
-  </div>
-
-  <!-- contact form -->
-  <section class="section container scrollspy" id="contact">
-    <div class="row">
-      <div class="col s12 l5">
-        <h2 class="indigo-text text-darken-4">Get in Touch</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
-      </div>
-      <div class="col s12 l5 offset-l2">
-        <form>
-          <div class="input-field">
-            <i class="material-icons prefix">email</i>
-            <input type="email" id="email">
-            <label for="email">Your Email</label>
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">message</i>
-            <textarea id="message" class="materialize-textarea" cols="20" rows="20"></textarea>
-            <label for="message">Your Message</label>
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">date_range</i>
-            <input type="text" id="date" class="datepicker">
-            <label for="date">Choose a date you need me for...</label>
-          </div>
-          <div class="input-field">
-            <p>Services required:</p>
-            <p>
-              <label>
-                <input type="checkbox">
-                <span>Photography</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox">
-                <span>Photo Editing</span>
-              </label>
-            </p>
-          </div>
-          <div class="input-field center">
-            <button class="btn">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
 
   <!-- footer -->
   <footer class="page-footer grey darken-3">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5>About Me</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+          <h5>Contact Me</h5>
+          <p>Email: <a href="mailto:{{ website_detail.email }}">{{ website_detail.email }} </a>  </p>
+
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#">Facebook</a></li>
-            <li><a class="grey-text text-lighten-3" href="#">Twitter</a></li>
-            <li><a class="grey-text text-lighten-3" href="#">Linked In</a></li>
-            <li><a class="grey-text text-lighten-3" href="#">Instagram</a></li>
-          </ul>
+          <p>Phone: <a href="tel:0048{{ website_detail.phone }}">{{ website_detail.phone }}</a>  </p>
         </div>
       </div>
     </div>
     <div class="footer-copyright grey darken-4">
-      <div class="container center-align">&copy; 2018 Photo Ninja</div>
+      <div class="container center-align">&copy; 2019</div>
     </div>
   </footer>
 

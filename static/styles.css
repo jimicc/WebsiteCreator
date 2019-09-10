@@ -1,6 +1,6 @@
 @media screen and (max-width: 600px){
 .content-padding{
-  padding: 15% 10% 5% 10%;
+  padding: 80px 10% 60px 10%;
 }
 .justify-small{
   text-align: justify;
@@ -27,11 +27,14 @@
 .px16{
   font-size: 16px;
 }
+.title{
+  padding-bottom: 0px !important;
+}
 }
 
-@media screen and (max-width: 991px){
+@media screen and (min-width: 601px){
 .content-padding{
-  padding: 10% 10% 5% 10%;
+  padding: 10% 10% 60px 10%;
 }
 .justify-small{
   text-align: justify;
@@ -40,10 +43,25 @@
   padding-top: 0 !important;
 }
 .h1-small{
-  padding-top: 10%;
+  padding-top: 5px;
 }
 .contact-box{
 margin: 0 auto;
+}
+.home-padding{
+padding-bottom: 60px;
+}
+h1.h1-small{
+  font-size: 1.6em;
+}
+h4.h4-small{
+  font-size: 1.2em;
+}
+h2{
+  margin-top: 5px;
+}
+h2 a.typewrite{
+  font-size: 0.5em;
 }
 }
 

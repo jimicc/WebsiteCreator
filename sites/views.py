@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Cards, Website
+from .models import Cards, Website, Cv, Cv_headline, Cv_list_element
 from . import forms
 
 
@@ -31,3 +31,14 @@ def new(request):
     else:
         form = forms.CreateWebsite()
     return render(request, 'sites/create_website.html', {'form':form})
+
+def cv(request):
+    cv = Cv.objects.all()
+    return render(request, 'sites/cv.html', {'cv_detail': cv})
+
+def cv_detailed(request, slug):
+    cv = Cv.objects.get(slug=slug)
+    return render(request, 'sites/cv_new.html', {'cv_detail': cv, })
+
+def cv_new(request):
+    return render(request, 'sites/create_cv.html', )

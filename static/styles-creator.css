@@ -1,9 +1,13 @@
 body{
   background-color: #FEFBF6;
 }
-
+@media screen and (min-width:793px){
+h1.btn-large.indigo{
+  font-size: 2em;
+}
+}
 body.themes{
-  background: url(hills.jpg);
+  background: url(background-creator.jpg);
 }
 
 header{
@@ -16,6 +20,7 @@ header{
   header{
     min-height: 500px;
   }
+
 }
 
 p.em2{
